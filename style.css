@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --light: crimson;
+  --dark: black;
+  --grey: grey;
+  --orange: #fc5130;
+  --SectionGrey: #f2f2f2;
+  --Sectionwhite: #fff;
+}
+.body {
+  font-family: "Roboto Mono", monospace;
+}
+/* header */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(./img/pexels-eriks-cistovs-9713163.jpg) center/cover fixed no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+/* end header */
+
+/* nav */
+.nav {
+  background: var(--light);
+}
+/* end nav */
+/* banner */
+.banner {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 4rem;
+  font-weight: 700;
+}
+.banner__title {
+  font-size: 4rem;
+  margin: 0.5rem;
+  letter-spacing: 0.15rem;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.banner__jobs {
+  letter-spacing: 0.15rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--light);
+}
+/* end banner */
+/* about section */
+.about {
+  padding: 2rem 0;
+  background: var(--Sectionwhite);
+}
+.about__center {
+  max-width: 90vw;
+  margin: 2rem auto;
+}
+.about-img {
+  margin: 3rem 0;
+  position: relative;
+}
+.about-img__photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.about-img:before {
+  content: "";
+  background: var(--grey);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+}
+.about-info {
+  margin: 3rem 0;
+}
+.about-info__title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  background: url("./img/logo-img-cz.png.crdownload") no-repeat;
+  margin: 0 1rem;
+}
+.about-info__text {
+  color: var(--grey);
+  line-height: 1.5;
+  font-size: 1.3rem;
+  margin: 3rem 1rem;
+}
+.about-info__single-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
+  border: 3px solid var(--dark);
+  transition: all 1s linear;
+  margin-right: 1rem;
+}
+.dark-btn {
+  background: var(--dark);
+  color: var(--light);
+}
+.dark-btn:hover {
+  background: var(--light);
+  color: var(--dark);
+}
+.light-btn {
+  color: var(--dark);
+}
+.light-btn:hover {
+  background: var(--dark);
+  color: var(--light);
+}
+@media screen and (min-width: 950px) {
+  .about__center {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .about-info,
+  .about-img {
+    flex: 0 0 calc(50% - 1rem);
+  }
+  .about-info {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+/* end about section */
+/* section title */
+.section-title {
+  text-align: center;
+}
+.section-title__name {
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  font-size: 5rem;
+  font-weight: 700;
+  font-style: italic;
+  background: url("./img/download.jpg") center no-repeat;
+  color: maroon;
+}
+/* end section title*/
+/* service section */
+.services {
+  background: var(--grey);
+  padding: 3rem 0;
+}
+.services-center {
+  max-width: 90vw;
+  margin: 2rem auto;
+}
+.services__single-service {
+  margin: 2rem auto;
+  padding: 2rem 0;
+  transition: all 0.5s ease-in;
+  text-align: center;
+}
+.services__single-service:hover {
+  background: var(--light);
+  box-shadow: 0 15px 20px black;
+}
+.services__single-icon {
+  font-size: 4rem;
+}
+.services__single-service-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5rem;
+}
+.services__single-service-text {
+  margin: 0 auto;
+  width: 80%;
+  text-align: left;
+  line-height: 1.2;
+  letter-spacing: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .services-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .services__single-service {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+@media screen and (min-width: 950px) {
+  .services__single-service {
+    flex: 0 0 calc(30% - 0.25rem);
+  }
+}
+/* end srvc sec */
